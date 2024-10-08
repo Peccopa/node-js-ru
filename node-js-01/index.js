@@ -60,3 +60,22 @@
 // server.listen(PORT, HOST, () => {
 //   console.log(`Server http://${HOST}:${PORT} is runnig`);
 // });
+
+// lesson #8
+// const http = require('http');
+// const fs = require('fs');
+// let server = http.createServer((req, res) => {
+//   res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+//   if (req.url == '/') {
+//     fs.createReadStream('./node-js-01/templates/index.html').pipe(res);
+//   } else if (req.url == '/about') {
+//     fs.createReadStream('./node-js-01/templates/about.html').pipe(res);
+//   } else {
+//     fs.createReadStream('./node-js-01/templates/error.html').pipe(res);
+//   }
+// });
+// const PORT = 3000;
+// const HOST = 'localhost';
+// server.listen(PORT, HOST, () => {
+//   console.log(`Server http://${HOST}:${PORT} is runnig`);
+// });
