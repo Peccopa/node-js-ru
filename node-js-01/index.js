@@ -79,3 +79,25 @@
 // server.listen(PORT, HOST, () => {
 //   console.log(`Server http://${HOST}:${PORT} is runnig`);
 // });
+
+// lesson #9
+// const express = require('express');
+// const app = express();
+
+// app.get('/', (req, res) => {
+//   res.send('Hello Worm!');
+// });
+
+// app.get('/about', (req, res) => {
+//   res.send('About Worms...');
+// });
+
+// app.get('/user/:username/:id', (req, res) => {
+//   res.send(`User ID:${req.params.id}. Username: ${req.params.username}`);
+// });
+
+// const PORT = 3000;
+
+// app.listen(PORT, () => {
+//   console.log(`Server started: http://localhost:${PORT}`);
+// });
