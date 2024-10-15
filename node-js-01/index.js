@@ -101,3 +101,32 @@
 // app.listen(PORT, () => {
 //   console.log(`Server started: http://localhost:${PORT}`);
 // });
+
+// lesson #10
+const express = require('express');
+const app = express();
+
+app.set('view engine', 'ejs');
+
+app.get('/', (req, res) => {
+  // res.sendFile(__dirname + '/index.html');
+  res.render('index');
+});
+
+app.get('/about', (req, res) => {
+  res.render('about');
+});
+
+app.get('/user/:username', (req, res) => {
+  const data = {
+    username: req.params.username,
+    hobbies: ['football', 'skate', 'baseball'],
+  };
+  res.render('user', data);
+});
+
+const PORT = 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server started: http://localhost:${PORT}`);
+});
