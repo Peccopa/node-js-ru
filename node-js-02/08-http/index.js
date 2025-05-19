@@ -1,4 +1,5 @@
 const http = require('http');
+
 const {
   getHTML,
   getText,
@@ -7,6 +8,7 @@ const {
   postComment,
   getHome,
 } = require('./handlers');
+
 const PORT = 5000;
 
 const server = http.createServer((req, res) => {
