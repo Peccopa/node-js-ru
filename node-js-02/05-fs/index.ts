@@ -1,0 +1,27 @@
+const fs = require('fs');
+
+fs.writeFile('./first.txt', 'First file text', (err: string) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log('File first.txt was written');
+    fs.appendFile(
+      './first.txt',
+      '\nFirst file appended text',
+      (err: string) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log('Text to the first.txt was appended');
+          fs.rename('./first.txt', './renamed-first.txt', (err: string) => {
+            if (err) {
+              console.log(err);
+            } else {
+              console.log('File first.txt was renamed');
+            }
+          });
+        }
+      },
+    );
+  }
+});
